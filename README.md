@@ -10,7 +10,9 @@
 ```
 
 *doin' ascii? throw some shade on it*
+
 *what is an "ascii bird" even? idk*
+
 **i know what shade is**
 
 1. shade keeps me cool on a hot day
