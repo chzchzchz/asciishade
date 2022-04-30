@@ -19,16 +19,16 @@
 2. shade is what haters throw at me so imma throw back at them
 3. shade is the spirit of shadow in the old SNES RPG: **Secret of Mana**
 
-Now, shade is an ASCII Art Editor.
+Now, asciishade is an ASCII Art Editor.
 
 -----
 
-### What is shade?
+### What is asciishade?
 
-Shade is an upcoming ASCII creation and editing tool.
+asciishade is an upcoming ASCII creation and editing tool.
 It is written from the ground up in Python using the curses library.
 
-### Why write shade?
+### Why write asciishade?
 
 Highly dissatisfied with the complete lack of options in the ascii-creation department, I decided to begin implementing a pure CLI tool. I began writing shade late at night on April 30th, 2022. It was easier than expected to get something close to what I wanted right-away. Now is just about fine-tuning the system.
 
@@ -46,9 +46,13 @@ A good number of people care about ASCII art.
 - ASCII Blaster: [https://asdf.us/asciiblaster/](https://asdf.us/asciiblaster/)
 - asciibird: [https://asciibird.jewbird.live/](https://asciibird.jewbird.live/)
 
-### Using shade
+### Using asciishade
 
 **Under construction**
+
+To run: `python3 main.py`
+
+**Keyboard Controls**
 
 'c': go back one color pair
 'v': go forward one color pair
@@ -74,6 +78,10 @@ space bar:
 - Multiple tabs
 - Easy switching of foreground / background colors
 - More!
+
+### Any plans for mouse support?
+
+No.
 
 -----
 
