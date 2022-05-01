@@ -17,6 +17,7 @@ hud_color = 8
 quit = False
 movement_keys = ['KEY_LEFT', 'KEY_RIGHT', 'KEY_UP', 'KEY_DOWN']
 
+
 def switch_mode():
     global mode
     if mode == 'normal':
@@ -24,17 +25,20 @@ def switch_mode():
     elif mode == 'text':
         mode = 'normal'
 
+
 def add_character(s, c):
     global x
     s.addstr(y, x, c, color_pair(current_color_pair))
     #s.addstr(y, x, '▀', color_pair(current_color_pair))
     x += 1
 
+
 def reset_cursor(s, dy=0, dx=0):
     global y, x
     y = dy
     x = dx
     s.move(y, x)
+
 
 def draw_hud(s):
     for j in range(max_y-2, max_y):
@@ -43,11 +47,15 @@ def draw_hud(s):
                 s.addstr(j, i, ' ', color_pair(hud_color))
             except:
                 pass
+
     s.addstr(max_y-2, 0, f'y: {y:3} | ', color_pair(hud_color)) 
+    s.addstr('█', color_pair(current_color_pair))
+    s.addstr(f'{current_color_pair:3}', color_pair(hud_color))
+    s.addstr(max_y-1, 0, f'x: {x:3} | ', color_pair(hud_color)) 
     s.addstr('#', color_pair(current_color_pair))
     s.addstr(f'{current_color_pair:3}', color_pair(hud_color))
-    s.addstr(max_y-1, 0, f'x: {x:3} |', color_pair(hud_color)) 
     reset_cursor(s, y, x)
+
 
 def handle_input(s, c):
     global y, x
@@ -107,10 +115,16 @@ def check_cursor_bounds():
     elif y > max_y - 3:
         y = max_y - 3
 
+
 def define_color_pairs():
     global max_color_pair_defined
-    [init_pair(i, 255, i) for i in range(256)]
-    max_color_pair_defined = 256
+    x = 0
+    for j in range(128):
+        for i in range(256):
+            init_pair(x, i, j)
+            x += 1
+    max_color_pair_defined = x
+
 
 def draw_initial_ascii(s):
     lines = [ 'Welcome to shade v0.1',
@@ -121,6 +135,7 @@ def draw_initial_ascii(s):
     for i in lines:
         s.addstr(y0, 0, i, color_pair(8))
         y0 += 1
+
 
 def main(s):
     global mode
@@ -139,6 +154,7 @@ def main(s):
         c = s.getkey()
         handle_input(s, c)
         s.refresh()
+
 
 if __name__ == '__main__':
     wrapper(main)

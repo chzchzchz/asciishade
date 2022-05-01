@@ -54,18 +54,19 @@ To run: `python3 main.py`
 
 **Keyboard Controls**
 
-'c': go back one color pair
-'v': go forward one color pair
-'q': quit
-arrow keys: cursor navigation
-tilde: switch mode between normal and text modes
-space bar: 
+- 'c': go back one color pair
+- 'v': go forward one color pair
+- 'q': quit
+- arrow keys: cursor navigation
+- tilde: switch mode between normal and text modes
+- space bar: 
     - normal mode: place a block
     - text mode: place a space character
 
 ### Features On The Way
 
 - Saving your current work
+- Loading from file
 - Exporting to:
     - irc
     - ascii
@@ -90,8 +91,11 @@ Did you find this tool helpful, useful, interesting, or cool? Maybe none of thos
 Either way, please consider sending me crypto through one of these addresses:
 
 Bitcoin: 38p6p4gLqfvZ4LShmWpNnphN1TjB8WgT8M
+
 Litecoin: MU8YSVUVwKDiaQfPurW8cVzxjbeZc2qv2S
+
 Ethereum: 0xC8E4ac8ee54698dDf47d7343e12aB83985F3900A
+
 Monero: 87eZsjdCFHtQXEf4A2Mer1XjJmLmD6N1b2maovAR4XtSYs4EupxZB7UfmG9eyb8qXpVvR9HdsEpf7K3A762w3LcNTg1fLTC 
 
 Or, you can become a patron on my [Patreon page](https://www.patreon.com/darkmage)!
