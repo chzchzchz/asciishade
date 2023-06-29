@@ -60,10 +60,16 @@ A good number of people care about ASCII art.
 
 ##### Building
 
-From the project root folder, execute:
+The Meson build system requires one to build outside of the tree to reduce
+clutter. From the project root folder, execute the following:
 
-```
-make
+```sh
+mkdir build/
+cd    build/
+
+meson setup ../
+
+ninja -j`nproc`
 ```
 
 ##### Running
