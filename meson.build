@@ -5,7 +5,7 @@ project('asciishade', 'c',
         'buildtype=plain',
         'c_std=c99',
         'werror=true',
-        'warning_level=everything'
+        'warning_level=3'
     ]
 )
 
